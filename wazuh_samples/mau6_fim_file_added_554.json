@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-08-28T16:23:51.902+0700",
+  "rule": {
+    "level": 5,
+    "description": "File added to the system.",
+    "id": "554",
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "ossec",
+      "syscheck",
+      "syscheck_entry_added",
+      "syscheck_file"
+    ],
+    "pci_dss": [
+      "11.5"
+    ],
+    "gpg13": [
+      "4.11"
+    ],
+    "gdpr": [
+      "II_5.1.f"
+    ],
+    "hipaa": [
+      "164.312.c.1",
+      "164.312.c.2"
+    ],
+    "nist_800_53": [
+      "SI.7"
+    ],
+    "tsc": [
+      "PI1.4",
+      "PI1.5",
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787909031.386417",
+  "full_log": "File '/etc/cups/subscriptions.conf.N' added\nMode: realtime\n",
+  "syscheck": {
+    "path": "/etc/cups/subscriptions.conf.N",
+    "mode": "realtime",
+    "size_after": "1754",
+    "perm_after": "rw-r-----",
+    "uid_after": "0",
+    "gid_after": "7",
+    "md5_after": "1b759b4dffc9e0efeaa74a49bc064a23",
+    "sha1_after": "d1472e30073309967c79da2321169305be76b47e",
+    "sha256_after": "6f2fc7e51efcba1ca88b786318f79850407e0eb1c509e677c04b10beb6538f0c",
+    "uname_after": "root",
+    "gname_after": "lp",
+    "mtime_after": "2026-08-28T16:23:51",
+    "inode_after": 5508547,
+    "event": "added"
+  },
+  "decoder": {
+    "name": "syscheck_new_entry"
+  },
+  "location": "syscheck"
+}

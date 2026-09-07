@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-08-28T17:01:08.771+0700",
+  "rule": {
+    "level": 10,
+    "description": "Multiple web server 400 error codes from same source ip.",
+    "id": "31151",
+    "mitre": {
+      "id": [
+        "T1595.002"
+      ],
+      "tactic": [
+        "Reconnaissance"
+      ],
+      "technique": [
+        "Vulnerability Scanning"
+      ]
+    },
+    "frequency": 14,
+    "firedtimes": 355,
+    "mail": false,
+    "groups": [
+      "web",
+      "accesslog",
+      "web_scan",
+      "recon"
+    ],
+    "pci_dss": [
+      "6.5",
+      "11.4"
+    ],
+    "gdpr": [
+      "IV_35.7.d"
+    ],
+    "nist_800_53": [
+      "SA.11",
+      "SI.4"
+    ],
+    "tsc": [
+      "CC6.6",
+      "CC7.1",
+      "CC8.1",
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787911268.9276061",
+  "previous_output": "192.168.26.10 - - [28/Aug/2026:17:01:07 +0700] \"GET /exchange/lib/JSUTIL.INC HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.6284.18 Safari/537.36 Brave/1.67.120\"\n192.168.26.10 - - [28/Aug/2026:17:01:07 +0700] \"GET /exchange/lib/JSROOT.INC HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.6252.91 Mobile/15E148 Safari/604.1\"\n192.168.26.10 - - [28/Aug/2026:17:01:07 +0700] \"GET /exchange/lib/JSATTACH.INC HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Android 14; Mobile; rv:133.0) Gecko/133.0 Firefox/133.0\"\n192.168.26.10 - - [28/Aug/2026:17:01:07 +0700] \"GET /exchange/lib/GETWHEN.INC HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Android 14; Mobile; rv:133.0) Gecko/133.0 Firefox/133.0\"\n192.168.26.10 - - [28/Aug/2026:17:01:07 +0700] \"GET /exchange/lib/GETREND.INC HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1\"\n192.168.26.10 - - [28/Aug/2026:17:01:07 +0700] \"GET /exchange/lib/DELETE.INC HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1\"\n192.168.26.10 - - [28/Aug/2026:17:01:07 +0700] \"GET /exchange/lib/AMPROPS.INC HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0\"\n192.168.26.10 - - [28/Aug/2026:17:01:07 +0700] \"GET /PDG_Cart/order.log HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.6248.19 Safari/537.36 Edg/141.0.6248.19\"\n192.168.26.10 - - [28/Aug/2026:17:01:07 +0700] \"GET /global.asa HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.6282.50 Safari/537.36 OPR/104.0.0.0\"\n192.168.26.10 - - [28/Aug/2026:17:01:07 +0700] \"GET /password.inc HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.6282.50 Safari/537.36 OPR/104.0.0.0\"\n192.168.26.10 - - [28/Aug/2026:17:01:07 +0700] \"GET /iisadmin/ HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.6252.91 Mobile/15E148 Safari/604.1\"",
+  "full_log": "192.168.26.10 - - [28/Aug/2026:17:01:07 +0700] \"GET /exchange/lib/LANG.INC HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 14.2; rv:133.0) Gecko/20100101 Firefox/133.0\"",
+  "decoder": {
+    "name": "web-accesslog"
+  },
+  "data": {
+    "protocol": "GET",
+    "srcip": "192.168.26.10",
+    "id": "404",
+    "url": "/exchange/lib/LANG.INC"
+  },
+  "location": "/var/log/apache2/access.log"
+}

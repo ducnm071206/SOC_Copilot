@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-08-28T17:03:48.042+0700",
+  "rule": {
+    "level": 7,
+    "description": "Integrity checksum changed.",
+    "id": "550",
+    "mitre": {
+      "id": [
+        "T1565.001"
+      ],
+      "tactic": [
+        "Impact"
+      ],
+      "technique": [
+        "Stored Data Manipulation"
+      ]
+    },
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "ossec",
+      "syscheck",
+      "syscheck_entry_modified",
+      "syscheck_file"
+    ],
+    "pci_dss": [
+      "11.5"
+    ],
+    "gpg13": [
+      "4.11"
+    ],
+    "gdpr": [
+      "II_5.1.f"
+    ],
+    "hipaa": [
+      "164.312.c.1",
+      "164.312.c.2"
+    ],
+    "nist_800_53": [
+      "SI.7"
+    ],
+    "tsc": [
+      "PI1.4",
+      "PI1.5",
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787911428.9289914",
+  "full_log": "File '/var/www/html/eicar.com' modified\nMode: realtime\nChanged attributes: size,mtime,md5,sha1,sha256\nSize changed from '0' to '68'\nOld modification time was: '1787911426', now it is '1735918157'\nOld md5sum was: 'd41d8cd98f00b204e9800998ecf8427e'\nNew md5sum is : '44d88612fea8a8f36de82e1278abb02f'\nOld sha1sum was: 'da39a3ee5e6b4b0d3255bfef95601890afd80709'\nNew sha1sum is : '3395856ce81f2b7382dee72602f798b642f14140'\nOld sha256sum was: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'\nNew sha256sum is : '275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f'\n",
+  "syscheck": {
+    "path": "/var/www/html/eicar.com",
+    "mode": "realtime",
+    "size_before": "0",
+    "size_after": "68",
+    "perm_after": "rw-r--r--",
+    "uid_after": "0",
+    "gid_after": "0",
+    "md5_before": "d41d8cd98f00b204e9800998ecf8427e",
+    "md5_after": "44d88612fea8a8f36de82e1278abb02f",
+    "sha1_before": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "sha1_after": "3395856ce81f2b7382dee72602f798b642f14140",
+    "sha256_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "sha256_after": "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f",
+    "uname_after": "root",
+    "gname_after": "root",
+    "mtime_before": "2026-08-28T17:03:46",
+    "mtime_after": "2025-01-03T22:29:17",
+    "inode_after": 2783017,
+    "changed_attributes": [
+      "size",
+      "mtime",
+      "md5",
+      "sha1",
+      "sha256"
+    ],
+    "event": "modified"
+  },
+  "decoder": {
+    "name": "syscheck_integrity_changed"
+  },
+  "location": "syscheck"
+}

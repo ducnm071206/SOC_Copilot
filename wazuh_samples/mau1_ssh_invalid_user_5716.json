@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-08-28T16:27:12.457+0700",
+  "rule": {
+    "level": 5,
+    "description": "sshd: Attempt to login using a non-existent user",
+    "id": "5710",
+    "mitre": {
+      "id": [
+        "T1110.001",
+        "T1021.004"
+      ],
+      "tactic": [
+        "Credential Access",
+        "Lateral Movement"
+      ],
+      "technique": [
+        "Password Guessing",
+        "SSH"
+      ]
+    },
+    "firedtimes": 8,
+    "mail": false,
+    "groups": [
+      "syslog",
+      "sshd",
+      "authentication_failed",
+      "invalid_login"
+    ],
+    "gdpr": [
+      "IV_35.7.d",
+      "IV_32.2"
+    ],
+    "gpg13": [
+      "7.1"
+    ],
+    "hipaa": [
+      "164.312.b"
+    ],
+    "nist_800_53": [
+      "AU.14",
+      "AC.7",
+      "AU.6"
+    ],
+    "pci_dss": [
+      "10.2.4",
+      "10.2.5",
+      "10.6.1"
+    ],
+    "tsc": [
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787909232.436776",
+  "full_log": "2026-08-28T16:27:12.114247+07:00 localhost sshd[6439]: Failed password for invalid user administrator from 192.168.26.10 port 55690 ssh2",
+  "predecoder": {
+    "program_name": "sshd",
+    "timestamp": "2026-08-28T16:27:12.114247+07:00"
+  },
+  "decoder": {
+    "parent": "sshd",
+    "name": "sshd"
+  },
+  "data": {
+    "srcip": "192.168.26.10",
+    "srcuser": "administrator"
+  },
+  "location": "/var/log/auth.log"
+}

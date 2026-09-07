@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-08-28T16:26:36.507+0700",
+  "rule": {
+    "level": 10,
+    "description": "sshd: brute force trying to get access to the system. Non existent user.",
+    "id": "5712",
+    "mitre": {
+      "id": [
+        "T1110"
+      ],
+      "tactic": [
+        "Credential Access"
+      ],
+      "technique": [
+        "Brute Force"
+      ]
+    },
+    "frequency": 8,
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "syslog",
+      "sshd",
+      "authentication_failures"
+    ],
+    "gdpr": [
+      "IV_35.7.d",
+      "IV_32.2"
+    ],
+    "hipaa": [
+      "164.312.b"
+    ],
+    "nist_800_53": [
+      "SI.4",
+      "AU.14",
+      "AC.7"
+    ],
+    "pci_dss": [
+      "11.4",
+      "10.2.4",
+      "10.2.5"
+    ],
+    "tsc": [
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787909196.396835",
+  "previous_output": "2026-08-28T16:26:36.452238+07:00 localhost sshd[6429]: Invalid user administrator from 192.168.26.10 port 54988\n2026-08-28T16:26:36.451601+07:00 localhost sshd[6431]: Invalid user administrator from 192.168.26.10 port 55000\n2026-08-28T16:26:36.451880+07:00 localhost sshd[6430]: Invalid user administrator from 192.168.26.10 port 54996\n2026-08-28T16:26:36.146817+07:00 localhost sshd[6426]: Disconnected from invalid user administrator 192.168.26.10 port 54980 [preauth]\n2026-08-28T16:26:36.140532+07:00 localhost sshd[6426]: Invalid user administrator from 192.168.26.10 port 54980\n2026-08-28T16:25:43.297724+07:00 localhost sshd[6419]: Failed password for invalid user hacker from 192.168.26.10 port 57136 ssh2\n2026-08-28T16:25:36.823108+07:00 localhost sshd[6419]: Invalid user hacker from 192.168.26.10 port 57136",
+  "full_log": "2026-08-28T16:26:36.460031+07:00 localhost sshd[6428]: Invalid user administrator from 192.168.26.10 port 54982",
+  "predecoder": {
+    "program_name": "sshd",
+    "timestamp": "2026-08-28T16:26:36.460031+07:00"
+  },
+  "decoder": {
+    "parent": "sshd",
+    "name": "sshd"
+  },
+  "data": {
+    "srcip": "192.168.26.10",
+    "srcport": "54982",
+    "srcuser": "administrator"
+  },
+  "location": "/var/log/auth.log"
+}

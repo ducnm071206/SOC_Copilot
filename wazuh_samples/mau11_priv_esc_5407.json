@@ -1,0 +1,52 @@
+{
+  "timestamp": "2026-08-28T16:23:45.603+0700",
+  "rule": {
+    "level": 4,
+    "description": "First time user executed sudo.",
+    "id": "5403",
+    "mitre": {
+      "id": [
+        "T1548.003"
+      ],
+      "tactic": [
+        "Privilege Escalation",
+        "Defense Evasion"
+      ],
+      "technique": [
+        "Sudo and Sudo Caching"
+      ]
+    },
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "syslog",
+      "sudo"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787909025.384534",
+  "full_log": "2026-08-28T16:23:44.849446+07:00 localhost sudo: sansforensics : TTY=pts/0 ; PWD=/home/sansforensics ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/auth.log",
+  "predecoder": {
+    "program_name": "sudo",
+    "timestamp": "2026-08-28T16:23:44.849446+07:00"
+  },
+  "decoder": {
+    "parent": "sudo",
+    "name": "sudo",
+    "ftscomment": "First time user executed the sudo command"
+  },
+  "data": {
+    "srcuser": "sansforensics",
+    "dstuser": "root",
+    "tty": "pts/0",
+    "pwd": "/home/sansforensics",
+    "command": "/usr/bin/tail -f /var/log/auth.log"
+  },
+  "location": "/var/log/auth.log"
+}
