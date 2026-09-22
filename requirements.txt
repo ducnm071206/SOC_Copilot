@@ -1,4 +1,0 @@
-streamlit==1.32.0 
-chromadb==0.4.24 
-ollama==0.1.6 
-requests==2.31.0 
