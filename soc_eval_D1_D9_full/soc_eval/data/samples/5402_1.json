@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-08-28T16:23:45.820+0700",
+  "rule": {
+    "level": 3,
+    "description": "Successful sudo to ROOT executed.",
+    "id": "5402",
+    "mitre": {
+      "id": [
+        "T1548.003"
+      ],
+      "tactic": [
+        "Privilege Escalation",
+        "Defense Evasion"
+      ],
+      "technique": [
+        "Sudo and Sudo Caching"
+      ]
+    },
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "syslog",
+      "sudo"
+    ],
+    "pci_dss": [
+      "10.2.5",
+      "10.2.2"
+    ],
+    "gpg13": [
+      "7.6",
+      "7.8",
+      "7.13"
+    ],
+    "gdpr": [
+      "IV_32.2"
+    ],
+    "hipaa": [
+      "164.312.b"
+    ],
+    "nist_800_53": [
+      "AU.14",
+      "AC.7",
+      "AC.6"
+    ],
+    "tsc": [
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787909025.385396",
+  "full_log": "Aug 28 09:23:44 siftworkstation sudo[4037]: sansforensics : TTY=pts/0 ; PWD=/home/sansforensics ; USER=root ; COMMAND=/usr/bin/tail -f /var/log/auth.log",
+  "predecoder": {
+    "program_name": "sudo",
+    "timestamp": "Aug 28 09:23:44",
+    "hostname": "siftworkstation"
+  },
+  "decoder": {
+    "parent": "sudo",
+    "name": "sudo",
+    "ftscomment": "First time user executed the sudo command"
+  },
+  "data": {
+    "srcuser": "sansforensics",
+    "dstuser": "root",
+    "tty": "pts/0",
+    "pwd": "/home/sansforensics",
+    "command": "/usr/bin/tail -f /var/log/auth.log"
+  },
+  "location": "journald"
+}

@@ -1,0 +1,216 @@
+{
+  "overall": {
+    "n_total_records": 361,
+    "n_error_or_no_parse": 47,
+    "n_matched_with_ground_truth": 0,
+    "recommended_action_accuracy": {
+      "k": 0,
+      "n": 0,
+      "display": "0/0 (khong co du lieu)"
+    },
+    "is_true_positive_accuracy": {
+      "k": 0,
+      "n": 0,
+      "display": "0/0 (khong co du lieu)"
+    },
+    "severity_exact_match": {
+      "k": 0,
+      "n": 0,
+      "display": "0/0 (khong co du lieu)"
+    },
+    "severity_within_1_bucket": {
+      "k": 0,
+      "n": 0,
+      "display": "0/0 (khong co du lieu)"
+    },
+    "latency_by_model_mode": {
+      "mock-model|full_context": {
+        "n_excl_cold_start": 74,
+        "n_incl_cold_start": 76,
+        "mean_seconds": 0.076,
+        "median_seconds": 0.078,
+        "p95_seconds": 0.098,
+        "min_seconds": 0.051,
+        "max_seconds": 0.1
+      },
+      "mock-model|none": {
+        "n_excl_cold_start": 74,
+        "n_incl_cold_start": 76,
+        "mean_seconds": 0.076,
+        "median_seconds": 0.078,
+        "p95_seconds": 0.098,
+        "min_seconds": 0.051,
+        "max_seconds": 0.1
+      },
+      "mock-model|rag": {
+        "n_excl_cold_start": 74,
+        "n_incl_cold_start": 76,
+        "mean_seconds": 0.076,
+        "median_seconds": 0.078,
+        "p95_seconds": 0.098,
+        "min_seconds": 0.051,
+        "max_seconds": 0.1
+      },
+      "mock-model|rule_map": {
+        "n_excl_cold_start": 83,
+        "n_incl_cold_start": 86,
+        "mean_seconds": 0.076,
+        "median_seconds": 0.078,
+        "p95_seconds": 0.098,
+        "min_seconds": 0.051,
+        "max_seconds": 0.1
+      }
+    },
+    "mismatches": []
+  },
+  "by_model_mode": {
+    "mock-model|full_context": {
+      "n_total_records": 87,
+      "n_error_or_no_parse": 11,
+      "n_matched_with_ground_truth": 0,
+      "recommended_action_accuracy": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "is_true_positive_accuracy": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "severity_exact_match": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "severity_within_1_bucket": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "latency_by_model_mode": {
+        "mock-model|full_context": {
+          "n_excl_cold_start": 74,
+          "n_incl_cold_start": 76,
+          "mean_seconds": 0.076,
+          "median_seconds": 0.078,
+          "p95_seconds": 0.098,
+          "min_seconds": 0.051,
+          "max_seconds": 0.1
+        }
+      },
+      "mismatches": []
+    },
+    "mock-model|none": {
+      "n_total_records": 87,
+      "n_error_or_no_parse": 11,
+      "n_matched_with_ground_truth": 0,
+      "recommended_action_accuracy": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "is_true_positive_accuracy": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "severity_exact_match": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "severity_within_1_bucket": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "latency_by_model_mode": {
+        "mock-model|none": {
+          "n_excl_cold_start": 74,
+          "n_incl_cold_start": 76,
+          "mean_seconds": 0.076,
+          "median_seconds": 0.078,
+          "p95_seconds": 0.098,
+          "min_seconds": 0.051,
+          "max_seconds": 0.1
+        }
+      },
+      "mismatches": []
+    },
+    "mock-model|rag": {
+      "n_total_records": 87,
+      "n_error_or_no_parse": 11,
+      "n_matched_with_ground_truth": 0,
+      "recommended_action_accuracy": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "is_true_positive_accuracy": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "severity_exact_match": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "severity_within_1_bucket": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "latency_by_model_mode": {
+        "mock-model|rag": {
+          "n_excl_cold_start": 74,
+          "n_incl_cold_start": 76,
+          "mean_seconds": 0.076,
+          "median_seconds": 0.078,
+          "p95_seconds": 0.098,
+          "min_seconds": 0.051,
+          "max_seconds": 0.1
+        }
+      },
+      "mismatches": []
+    },
+    "mock-model|rule_map": {
+      "n_total_records": 100,
+      "n_error_or_no_parse": 14,
+      "n_matched_with_ground_truth": 0,
+      "recommended_action_accuracy": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "is_true_positive_accuracy": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "severity_exact_match": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "severity_within_1_bucket": {
+        "k": 0,
+        "n": 0,
+        "display": "0/0 (khong co du lieu)"
+      },
+      "latency_by_model_mode": {
+        "mock-model|rule_map": {
+          "n_excl_cold_start": 83,
+          "n_incl_cold_start": 86,
+          "mean_seconds": 0.076,
+          "median_seconds": 0.078,
+          "p95_seconds": 0.098,
+          "min_seconds": 0.051,
+          "max_seconds": 0.1
+        }
+      },
+      "mismatches": []
+    }
+  }
+}

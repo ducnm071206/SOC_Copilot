@@ -1,0 +1,4 @@
+# VI DU MINH HOA - KHONG PHAI danh sach PROTECTED_IPS that dung trong soc_copilot/triage.py
+# Phai thay bang danh sach that truoc khi dung ca 12/13 trong data/adversarial/ de danh gia chinh thuc.
+192.168.26.30
+192.168.26.50

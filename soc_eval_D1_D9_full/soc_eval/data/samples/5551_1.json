@@ -1,0 +1,77 @@
+{
+  "timestamp": "2026-08-28T16:26:58.421+0700",
+  "rule": {
+    "level": 10,
+    "description": "PAM: Multiple failed logins in a small period of time.",
+    "id": "5551",
+    "mitre": {
+      "id": [
+        "T1110"
+      ],
+      "tactic": [
+        "Credential Access"
+      ],
+      "technique": [
+        "Brute Force"
+      ]
+    },
+    "frequency": 8,
+    "firedtimes": 2,
+    "mail": false,
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_failures"
+    ],
+    "pci_dss": [
+      "10.2.4",
+      "10.2.5",
+      "11.4"
+    ],
+    "gpg13": [
+      "7.8"
+    ],
+    "gdpr": [
+      "IV_35.7.d",
+      "IV_32.2"
+    ],
+    "hipaa": [
+      "164.312.b"
+    ],
+    "nist_800_53": [
+      "AU.14",
+      "AC.7",
+      "SI.4"
+    ],
+    "tsc": [
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787909218.421172",
+  "previous_output": "2026-08-28T16:26:57.617671+07:00 localhost sshd[6436]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.26.10 \n2026-08-28T16:26:36.469375+07:00 localhost sshd[6428]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.26.10 \n2026-08-28T16:26:36.463368+07:00 localhost sshd[6430]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.26.10 \n2026-08-28T16:26:36.462579+07:00 localhost sshd[6429]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.26.10 \n2026-08-28T16:26:36.459314+07:00 localhost sshd[6431]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.26.10 \n2026-08-28T16:26:14.002384+07:00 localhost sshd[6422]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.26.10  user=sansforensics\n2026-08-28T16:25:40.792590+07:00 localhost sshd[6419]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.26.10 ",
+  "full_log": "2026-08-28T16:26:57.622101+07:00 localhost sshd[6439]: pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.26.10 ",
+  "predecoder": {
+    "program_name": "sshd",
+    "timestamp": "2026-08-28T16:26:57.622101+07:00"
+  },
+  "decoder": {
+    "name": "pam"
+  },
+  "data": {
+    "srcip": "192.168.26.10",
+    "uid": "0",
+    "euid": "0",
+    "tty": "ssh"
+  },
+  "location": "/var/log/auth.log"
+}

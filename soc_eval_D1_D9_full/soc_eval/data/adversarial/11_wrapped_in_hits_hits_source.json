@@ -1,0 +1,63 @@
+{
+  "took": 2,
+  "hits": {
+    "total": {
+      "value": 1
+    },
+    "hits": [
+      {
+        "_index": "wazuh-alerts-4.x-2026.09.21",
+        "_id": "zz998877",
+        "_source": {
+          "timestamp": "2026-09-21T10:05:00.000+0700",
+          "rule": {
+            "level": 5,
+            "description": "sshd: Attempt to login using a non-existent user",
+            "id": "5710",
+            "mitre": {
+              "id": [
+                "T1110.001"
+              ],
+              "tactic": [
+                "Credential Access"
+              ],
+              "technique": [
+                "Password Guessing"
+              ]
+            },
+            "firedtimes": 1,
+            "mail": false,
+            "groups": [
+              "syslog",
+              "sshd",
+              "authentication_failed",
+              "invalid_login"
+            ]
+          },
+          "agent": {
+            "id": "000",
+            "name": "siftworkstation"
+          },
+          "manager": {
+            "name": "siftworkstation"
+          },
+          "id": "adv.ssh.placeholder",
+          "full_log": "2026-09-21T10:05:00.000000+07:00 localhost sshd[9999]: Failed password for invalid user oracle from 192.168.26.10 port 55555 ssh2",
+          "predecoder": {
+            "program_name": "sshd",
+            "timestamp": "2026-09-21T10:05:00.000000+07:00"
+          },
+          "decoder": {
+            "parent": "sshd",
+            "name": "sshd"
+          },
+          "data": {
+            "srcip": "192.168.26.10",
+            "srcuser": "oracle"
+          },
+          "location": "/var/log/auth.log"
+        }
+      }
+    ]
+  }
+}

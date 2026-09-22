@@ -1,0 +1,47 @@
+{
+  "timestamp": "2026-08-28T16:17:19.462+0700",
+  "rule": {
+    "level": 8,
+    "description": "Maximum authentication attempts exceeded.",
+    "id": "5758",
+    "mitre": {
+      "id": [
+        "T1110"
+      ],
+      "tactic": [
+        "Credential Access"
+      ],
+      "technique": [
+        "Brute Force"
+      ]
+    },
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "syslog",
+      "sshd",
+      "authentication_failed"
+    ],
+    "gpg13": [
+      "7.1"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787908639.83341",
+  "full_log": "2026-08-28T16:17:17.810743+07:00 localhost sshd[10237]: error: maximum authentication attempts exceeded for invalid user administrator from 192.168.26.10 port 57924 ssh2 [preauth]",
+  "predecoder": {
+    "program_name": "sshd",
+    "timestamp": "2026-08-28T16:17:17.810743+07:00"
+  },
+  "decoder": {
+    "parent": "sshd",
+    "name": "sshd"
+  },
+  "location": "/var/log/auth.log"
+}

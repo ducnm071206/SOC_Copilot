@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-08-28T16:57:54.402+0700",
+  "rule": {
+    "level": 6,
+    "description": "XSS (Cross Site Scripting) attempt.",
+    "id": "31105",
+    "mitre": {
+      "id": [
+        "T1059.007"
+      ],
+      "tactic": [
+        "Execution"
+      ],
+      "technique": [
+        "JavaScript"
+      ]
+    },
+    "firedtimes": 71,
+    "mail": false,
+    "groups": [
+      "web",
+      "accesslog",
+      "attack"
+    ],
+    "pci_dss": [
+      "6.5",
+      "11.4",
+      "6.5.7"
+    ],
+    "gdpr": [
+      "IV_35.7.d"
+    ],
+    "nist_800_53": [
+      "SA.11",
+      "SI.4"
+    ],
+    "tsc": [
+      "CC6.6",
+      "CC7.1",
+      "CC8.1",
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787911074.6040733",
+  "full_log": "192.168.26.10 - - [28/Aug/2026:16:57:54 +0700] \"GET /phorum/admin/footer.php?GLOBALS[message]=<script>alert('Vulnerable')</script> HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Android 14; Mobile; rv:133.0) Gecko/133.0 Firefox/133.0\"",
+  "decoder": {
+    "name": "web-accesslog"
+  },
+  "data": {
+    "protocol": "GET",
+    "srcip": "192.168.26.10",
+    "id": "404",
+    "url": "/phorum/admin/footer.php?GLOBALS[message]=<script>alert('Vulnerable')</script>"
+  },
+  "location": "/var/log/apache2/access.log"
+}

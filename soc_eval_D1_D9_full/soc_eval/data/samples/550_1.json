@@ -1,0 +1,94 @@
+{
+  "timestamp": "2026-08-28T15:41:58.991+0700",
+  "rule": {
+    "level": 7,
+    "description": "Integrity checksum changed.",
+    "id": "550",
+    "mitre": {
+      "id": [
+        "T1565.001"
+      ],
+      "tactic": [
+        "Impact"
+      ],
+      "technique": [
+        "Stored Data Manipulation"
+      ]
+    },
+    "firedtimes": 2,
+    "mail": false,
+    "groups": [
+      "ossec",
+      "syscheck",
+      "syscheck_entry_modified",
+      "syscheck_file"
+    ],
+    "pci_dss": [
+      "11.5"
+    ],
+    "gpg13": [
+      "4.11"
+    ],
+    "gdpr": [
+      "II_5.1.f"
+    ],
+    "hipaa": [
+      "164.312.c.1",
+      "164.312.c.2"
+    ],
+    "nist_800_53": [
+      "SI.7"
+    ],
+    "tsc": [
+      "PI1.4",
+      "PI1.5",
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787906518.25103",
+  "full_log": "File '/etc/cups/subscriptions.conf.O' modified\nMode: realtime\nChanged attributes: size,inode,mtime,md5,sha1,sha256\nSize changed from '1437' to '1138'\nOld modification time was: '1787861663', now it is '1787906405'\nOld inode was: '5508547', now it is '5508681'\nOld md5sum was: 'd00c4830fc5dd42f96e7f86af0789df2'\nNew md5sum is : '01fd28902866748f82d0d7665fc35e9d'\nOld sha1sum was: '1e4c5f598ccce281f80c7d443d3c0153d29e1fc5'\nNew sha1sum is : '14cfa29991d571e05abdab30e2981d0f1b561bbc'\nOld sha256sum was: 'cec5eb3372efee7c47b68330533df1e5607731c875ea9f72781887c64b53f3e3'\nNew sha256sum is : '609f13e1facec284e70ce59c373a4fc5e0b68b81787e6423e79165f64d913f47'\n",
+  "syscheck": {
+    "path": "/etc/cups/subscriptions.conf.O",
+    "mode": "realtime",
+    "size_before": "1437",
+    "size_after": "1138",
+    "perm_after": "rw-r-----",
+    "uid_after": "0",
+    "gid_after": "7",
+    "md5_before": "d00c4830fc5dd42f96e7f86af0789df2",
+    "md5_after": "01fd28902866748f82d0d7665fc35e9d",
+    "sha1_before": "1e4c5f598ccce281f80c7d443d3c0153d29e1fc5",
+    "sha1_after": "14cfa29991d571e05abdab30e2981d0f1b561bbc",
+    "sha256_before": "cec5eb3372efee7c47b68330533df1e5607731c875ea9f72781887c64b53f3e3",
+    "sha256_after": "609f13e1facec284e70ce59c373a4fc5e0b68b81787e6423e79165f64d913f47",
+    "uname_after": "root",
+    "gname_after": "lp",
+    "mtime_before": "2026-08-28T03:14:23",
+    "mtime_after": "2026-08-28T15:40:05",
+    "inode_before": 5508547,
+    "inode_after": 5508681,
+    "changed_attributes": [
+      "size",
+      "inode",
+      "mtime",
+      "md5",
+      "sha1",
+      "sha256"
+    ],
+    "event": "modified"
+  },
+  "decoder": {
+    "name": "syscheck_integrity_changed"
+  },
+  "location": "syscheck"
+}

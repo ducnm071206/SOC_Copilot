@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-08-28T16:57:56.327+0700",
+  "rule": {
+    "level": 10,
+    "description": "Multiple XSS (Cross Site Scripting) attempts from same source ip.",
+    "id": "31154",
+    "mitre": {
+      "id": [
+        "T1059"
+      ],
+      "tactic": [
+        "Execution"
+      ],
+      "technique": [
+        "Command and Scripting Interpreter"
+      ]
+    },
+    "frequency": 10,
+    "firedtimes": 13,
+    "mail": false,
+    "groups": [
+      "web",
+      "accesslog",
+      "attack"
+    ],
+    "pci_dss": [
+      "6.5",
+      "11.4",
+      "6.5.7"
+    ],
+    "gdpr": [
+      "IV_35.7.d"
+    ],
+    "nist_800_53": [
+      "SA.11",
+      "SI.4"
+    ],
+    "tsc": [
+      "CC6.6",
+      "CC7.1",
+      "CC8.1",
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787911076.6099499",
+  "previous_output": "192.168.26.10 - - [28/Aug/2026:16:57:55 +0700] \"GET /forums/browse.php?fid=3&tid=46&go=<script>JavaScript:alert('Vulnerable');</script> HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/141.0.6252.91 Mobile/15E148 Safari/604.1\"\n192.168.26.10 - - [28/Aug/2026:16:57:55 +0700] \"GET /forums/index.php?board=;action=login2&user=USERNAME&cookielength=120&passwrd=PASSWORD<script>alert('Vulnerable')</script> HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_3_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.6252.12 Safari/537.36\"\n192.168.26.10 - - [28/Aug/2026:16:57:55 +0700] \"GET /friend.php?op=SiteSent&fname=<script>alert('Vulnerable')</script> HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (iPhone; CPU iPhone OS 17_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1\"\n192.168.26.10 - - [28/Aug/2026:16:57:55 +0700] \"GET /gallery/search.php?searchstring=<script>alert(document.cookie)</script> HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15\"\n192.168.26.10 - - [28/Aug/2026:16:57:55 +0700] \"GET /index.php/content/advancedsearch/?SearchText=<script>alert(document.cookie)</script>&PhraseSearchText=<script>alert(document.cookie)</script>&SearchContentClassID=-1&SearchSectionID=-1&SearchDate=-1&SearchButton=Search HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.6281.32 Safari/537.36 Edg/142.0.6281.32\"\n192.168.26.10 - - [28/Aug/2026:16:57:55 +0700] \"GET /guestbook/?number=5&lng=%3Cscript%3Ealert(document.domain);%3C/script%3E HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.6284.18 Safari/537.36 Brave/1.67.120\"\n192.168.26.10 - - [28/Aug/2026:16:57:55 +0700] \"GET /html/chatheader.php?mainfile=anything&Default_Theme='<script>alert(document.cookie);</script> HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 14.2; rv:133.0) Gecko/20100101 Firefox/133.0\"\n192.168.26.10 - - [28/Aug/2026:16:57:55 +0700] \"GET /html/cgi-bin/cgicso?query=<script>alert('Vulnerable')</script> HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 14.2; rv:133.0) Gecko/20100101 Firefox/133.0\"\n192.168.26.10 - - [28/Aug/2026:16:57:55 +0700] \"GET /html/partner.php?mainfile=anything&Default_Theme='<script>alert(document.cookie);</script> HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 15_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Safari/605.1.15\"",
+  "full_log": "192.168.26.10 - - [28/Aug/2026:16:57:55 +0700] \"GET /error/500error.jsp?et=1<script>alert('Vulnerable')</script>; HTTP/1.1\" 404 491 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_3_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.6252.12 Safari/537.36\"",
+  "decoder": {
+    "name": "web-accesslog"
+  },
+  "data": {
+    "protocol": "GET",
+    "srcip": "192.168.26.10",
+    "id": "404",
+    "url": "/error/500error.jsp?et=1<script>alert('Vulnerable')</script>;"
+  },
+  "location": "/var/log/apache2/access.log"
+}

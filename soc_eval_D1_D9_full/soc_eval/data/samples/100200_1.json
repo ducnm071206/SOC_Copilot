@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-08-28T18:12:04.221+0700",
+  "rule": {
+    "level": 10,
+    "description": "Possible port scan detected: multiple ports scanned from same source in a short period.",
+    "id": "100200",
+    "mitre": {
+      "id": [
+        "T1046"
+      ],
+      "tactic": [
+        "Discovery"
+      ],
+      "technique": [
+        "Network Service Discovery"
+      ]
+    },
+    "frequency": 12,
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "firewall",
+      "recon",
+      "port_scan"
+    ],
+    "pci_dss": [
+      "11.4"
+    ],
+    "gdpr": [
+      "IV_35.7.d"
+    ],
+    "nist_800_53": [
+      "SI.4",
+      "SA.11"
+    ],
+    "tsc": [
+      "CC6.1",
+      "CC6.6",
+      "CC7.1"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787915524.9312207",
+  "previous_output": "2026-08-28T18:12:03.918431+07:00 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.10 DST=192.168.26.50 PROTO=TCP SPT=51230 DPT=21 \n2026-08-28T18:12:03.941102+07:00 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.10 DST=192.168.26.50 PROTO=TCP SPT=51231 DPT=22 \n2026-08-28T18:12:03.963744+07:00 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.10 DST=192.168.26.50 PROTO=TCP SPT=51232 DPT=23 \n2026-08-28T18:12:03.987291+07:00 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.10 DST=192.168.26.50 PROTO=TCP SPT=51233 DPT=25 \n2026-08-28T18:12:04.010655+07:00 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.10 DST=192.168.26.50 PROTO=TCP SPT=51234 DPT=80",
+  "full_log": "2026-08-28T18:12:04.210318+07:00 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.10 DST=192.168.26.50 PROTO=TCP SPT=51242 DPT=3389",
+  "predecoder": {
+    "program_name": "kernel",
+    "timestamp": "2026-08-28T18:12:04.210318+07:00"
+  },
+  "decoder": {
+    "name": "iptables"
+  },
+  "data": {
+    "srcip": "192.168.26.10",
+    "dstip": "192.168.26.50",
+    "protocol": "TCP",
+    "dstport": "3389",
+    "action": "DROP",
+    "ports_scanned": "21,22,23,25,80,443,445,3306,3389,8080,8443,5900"
+  },
+  "location": "/var/log/kern.log"
+}

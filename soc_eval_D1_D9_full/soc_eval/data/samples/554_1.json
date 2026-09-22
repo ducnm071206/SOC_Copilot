@@ -1,0 +1,69 @@
+{
+  "timestamp": "2026-08-28T17:03:46.272+0700",
+  "rule": {
+    "level": 5,
+    "description": "File added to the system.",
+    "id": "554",
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "ossec",
+      "syscheck",
+      "syscheck_entry_added",
+      "syscheck_file"
+    ],
+    "pci_dss": [
+      "11.5"
+    ],
+    "gpg13": [
+      "4.11"
+    ],
+    "gdpr": [
+      "II_5.1.f"
+    ],
+    "hipaa": [
+      "164.312.c.1",
+      "164.312.c.2"
+    ],
+    "nist_800_53": [
+      "SI.7"
+    ],
+    "tsc": [
+      "PI1.4",
+      "PI1.5",
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787911426.9288103",
+  "full_log": "File '/var/www/html/eicar.com' added\nMode: realtime\n",
+  "syscheck": {
+    "path": "/var/www/html/eicar.com",
+    "mode": "realtime",
+    "size_after": "0",
+    "perm_after": "rw-r--r--",
+    "uid_after": "0",
+    "gid_after": "0",
+    "md5_after": "d41d8cd98f00b204e9800998ecf8427e",
+    "sha1_after": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "sha256_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "uname_after": "root",
+    "gname_after": "root",
+    "mtime_after": "2026-08-28T17:03:46",
+    "inode_after": 2783017,
+    "event": "added"
+  },
+  "decoder": {
+    "name": "syscheck_new_entry"
+  },
+  "location": "syscheck"
+}

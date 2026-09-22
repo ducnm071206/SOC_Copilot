@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-08-28T16:19:16.008+0700",
+  "rule": {
+    "level": 10,
+    "description": "syslog: User missed the password more than one time",
+    "id": "2502",
+    "mitre": {
+      "id": [
+        "T1110"
+      ],
+      "tactic": [
+        "Credential Access"
+      ],
+      "technique": [
+        "Brute Force"
+      ]
+    },
+    "firedtimes": 29,
+    "mail": false,
+    "groups": [
+      "syslog",
+      "access_control",
+      "authentication_failed"
+    ],
+    "pci_dss": [
+      "10.2.4",
+      "10.2.5"
+    ],
+    "gpg13": [
+      "7.8"
+    ],
+    "gdpr": [
+      "IV_35.7.d",
+      "IV_32.2"
+    ],
+    "hipaa": [
+      "164.312.b"
+    ],
+    "nist_800_53": [
+      "AU.14",
+      "AC.7"
+    ],
+    "tsc": [
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787908756.255600",
+  "full_log": "2026-08-28T16:19:14.297814+07:00 localhost sshd[10492]: PAM 5 more authentication failures; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.26.10 ",
+  "predecoder": {
+    "program_name": "sshd",
+    "timestamp": "2026-08-28T16:19:14.297814+07:00"
+  },
+  "decoder": {
+    "name": "sshd"
+  },
+  "location": "/var/log/auth.log"
+}

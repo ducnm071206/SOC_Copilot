@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-08-28T16:57:44.260+0700",
+  "rule": {
+    "level": 4,
+    "description": "Web server 501 error code (Not Implemented).",
+    "id": "31121",
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "web",
+      "accesslog"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787911064.5599313",
+  "full_log": "192.168.26.10 - - [28/Aug/2026:16:57:43 +0700] \"TRACK / HTTP/1.1\" 501 499 \"-\" \"Mozilla/5.0 (Linux; Android 15; Pixel 8 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.6286.11 Mobile Safari/537.36\"",
+  "decoder": {
+    "name": "web-accesslog"
+  },
+  "data": {
+    "protocol": "TRACK",
+    "srcip": "192.168.26.10",
+    "id": "501",
+    "url": "/"
+  },
+  "location": "/var/log/apache2/access.log"
+}

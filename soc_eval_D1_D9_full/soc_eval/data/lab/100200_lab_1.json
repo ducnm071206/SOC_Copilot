@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-09-21T09:05:02.250000+0700",
+  "rule": {
+    "level": 10,
+    "description": "Possible port scan detected: multiple ports scanned from same source in a short period.",
+    "id": "100200",
+    "mitre": {
+      "id": [
+        "T1046"
+      ],
+      "tactic": [
+        "Discovery"
+      ],
+      "technique": [
+        "Network Service Discovery"
+      ]
+    },
+    "frequency": 16,
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "firewall",
+      "recon",
+      "port_scan"
+    ],
+    "pci_dss": [
+      "11.4"
+    ],
+    "gdpr": [
+      "IV_35.7.d"
+    ],
+    "nist_800_53": [
+      "SI.4",
+      "SA.11"
+    ],
+    "tsc": [
+      "CC6.1",
+      "CC6.6",
+      "CC7.1"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "lab.portscan.1.300",
+  "previous_output": "2026-09-21T09:05:00.000000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50100 DPT=21 \n2026-09-21T09:05:00.150000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50101 DPT=22 \n2026-09-21T09:05:00.300000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50102 DPT=23 \n2026-09-21T09:05:00.450000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50103 DPT=25 \n2026-09-21T09:05:00.600000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50104 DPT=80 \n2026-09-21T09:05:00.750000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50105 DPT=135 \n2026-09-21T09:05:00.900000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50106 DPT=139 \n2026-09-21T09:05:01.050000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50107 DPT=143 \n2026-09-21T09:05:01.200000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50108 DPT=443 \n2026-09-21T09:05:01.350000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50109 DPT=445 \n2026-09-21T09:05:01.500000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50110 DPT=993 \n2026-09-21T09:05:01.650000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50111 DPT=1433 \n2026-09-21T09:05:01.800000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50112 DPT=3306 \n2026-09-21T09:05:01.950000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50113 DPT=3389 \n2026-09-21T09:05:02.100000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50114 DPT=5900 ",
+  "full_log": "2026-09-21T09:05:02.250000+0700 localhost kernel: IPTABLES-DROP: IN=eth0 OUT= SRC=192.168.26.20 DST=192.168.26.50 PROTO=TCP SPT=50115 DPT=8080 ",
+  "predecoder": {
+    "program_name": "kernel",
+    "timestamp": "2026-09-21T09:05:02.250000+0700"
+  },
+  "decoder": {
+    "name": "iptables"
+  },
+  "data": {
+    "srcip": "192.168.26.20",
+    "dstip": "192.168.26.50",
+    "protocol": "TCP",
+    "dstport": "8080",
+    "action": "DROP",
+    "ports_scanned": "21,22,23,25,80,135,139,143,443,445,993,1433,3306,3389,5900,8080"
+  },
+  "location": "/var/log/kern.log",
+  "_lab_synthetic": true,
+  "_lab_synthetic_note": "Alert nay LA DU LIEU LAB TAI TAO (khong phai capture nmap that), sinh boi eval/generate_lab_data.py theo Phuong an (a) cua checklist D2. Format duoc mo phong dung theo mau10_portscan_100200.json va decoder iptables that trong pool. Neu co log nmap that, hay thay the file nay va giu nguyen ten."
+}

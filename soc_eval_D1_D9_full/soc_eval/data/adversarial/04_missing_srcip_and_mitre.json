@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-09-21T10:00:00.000+0700",
+  "rule": {
+    "level": 6,
+    "description": "Apache: Attempt to access forbidden file or directory.",
+    "id": "30305",
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "web",
+      "accesslog",
+      "attack"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "adv.web.placeholder",
+  "full_log": "192.168.26.10 - - [21/Sep/2026:10:00:00 +0700] \"GET /wp-admin/ HTTP/1.1\" 200 500 \"-\" \"Mozilla/5.0\"",
+  "decoder": {
+    "name": "web-accesslog"
+  },
+  "data": {
+    "protocol": "GET",
+    "id": "200",
+    "url": "/wp-admin/"
+  },
+  "location": "/var/log/apache2/access.log"
+}

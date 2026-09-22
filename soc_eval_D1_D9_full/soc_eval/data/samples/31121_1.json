@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-08-28T16:57:50.295+0700",
+  "rule": {
+    "level": 4,
+    "description": "Web server 501 error code (Not Implemented).",
+    "id": "31121",
+    "firedtimes": 5,
+    "mail": false,
+    "groups": [
+      "web",
+      "accesslog"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787911070.5851594",
+  "full_log": "192.168.26.10 - - [28/Aug/2026:16:57:50 +0700] \"get / HTTP/1.1\" 501 497 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 14_3_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.6283.10 Safari/537.36 Vivaldi/6.7.3312.4\"",
+  "decoder": {
+    "name": "web-accesslog"
+  },
+  "data": {
+    "protocol": "get",
+    "srcip": "192.168.26.10",
+    "id": "501",
+    "url": "/"
+  },
+  "location": "/var/log/apache2/access.log"
+}

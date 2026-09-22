@@ -1,0 +1,67 @@
+{
+  "timestamp": "2026-09-21T11:51:44.000000+0700",
+  "rule": {
+    "level": 12,
+    "description": "Suspicious privilege escalation via sudo: sensitive file or sudoers access (DE XUAT rule 100230 - CHUA XAC NHAN trong bo rule that, can Tai/Binh duyet).",
+    "id": "100230",
+    "mitre": {
+      "id": [
+        "T1548.003",
+        "T1078"
+      ],
+      "tactic": [
+        "Privilege Escalation",
+        "Defense Evasion"
+      ],
+      "technique": [
+        "Sudo and Sudo Caching"
+      ]
+    },
+    "firedtimes": 1,
+    "mail": true,
+    "groups": [
+      "syslog",
+      "sudo",
+      "privilege_escalation"
+    ],
+    "pci_dss": [
+      "10.2.5",
+      "10.2.2"
+    ],
+    "gdpr": [
+      "IV_32.2"
+    ],
+    "nist_800_53": [
+      "AC.6",
+      "AC.7",
+      "AU.14"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "lab.privesc.1.1.10300",
+  "full_log": "2026-09-21T11:51:44.000000+07:00 siftworkstation sudo[5004]: webadmin : TTY=pts/1 ; PWD=/home/webadmin ; USER=root ; COMMAND=/usr/bin/visudo -f /etc/sudoers.d/99-tmp -- -c \"webadmin ALL=(ALL) NOPASSWD:ALL\"",
+  "predecoder": {
+    "program_name": "sudo",
+    "timestamp": "2026-09-21T11:51:44.000000+07:00"
+  },
+  "decoder": {
+    "parent": "sudo",
+    "name": "sudo"
+  },
+  "data": {
+    "srcuser": "webadmin",
+    "dstuser": "root",
+    "tty": "pts/1",
+    "pwd": "/home/webadmin",
+    "command": "/usr/bin/visudo -f /etc/sudoers.d/99-tmp -- -c \"webadmin ALL=(ALL) NOPASSWD:ALL\""
+  },
+  "location": "journald",
+  "_lab_synthetic": true,
+  "_lab_synthetic_note": "Alert nay LA DU LIEU LAB TAI TAO, sinh boi eval/generate_lab_data.py theo Phuong an (a) cua checklist D2. Rule id '100230' la DE XUAT, CHUA duoc xac nhan la ID chinh thuc trong SOC copilot - can Tai/Binh duyet truoc khi dung chinh thuc. Kich ban mo phong theo dung format decoder 'sudo' that (xem rule 5402 that trong pool), nhung thay lenh vo hai bang lenh nhay cam de phan anh dung SOP 'leo thang dac quyen'."
+}

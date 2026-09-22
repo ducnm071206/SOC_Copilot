@@ -1,0 +1,82 @@
+{
+  "timestamp": "2026-08-28T16:21:02.334+0700",
+  "rule": {
+    "level": 12,
+    "description": "Multiple authentication failures followed by a success.",
+    "id": "40112",
+    "mitre": {
+      "id": [
+        "T1078",
+        "T1110"
+      ],
+      "tactic": [
+        "Defense Evasion",
+        "Persistence",
+        "Privilege Escalation",
+        "Initial Access",
+        "Credential Access"
+      ],
+      "technique": [
+        "Valid Accounts",
+        "Brute Force"
+      ]
+    },
+    "frequency": 2,
+    "firedtimes": 1,
+    "mail": true,
+    "groups": [
+      "syslog",
+      "attacks"
+    ],
+    "pci_dss": [
+      "10.2.4",
+      "10.2.5",
+      "11.4"
+    ],
+    "gpg13": [
+      "7.1",
+      "7.8"
+    ],
+    "gdpr": [
+      "IV_35.7.d",
+      "IV_32.2"
+    ],
+    "hipaa": [
+      "164.312.b"
+    ],
+    "nist_800_53": [
+      "AU.14",
+      "AC.7",
+      "SI.4"
+    ],
+    "tsc": [
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787908862.373554",
+  "full_log": "2026-08-28T16:21:00.992636+07:00 localhost sshd[10564]: Accepted password for sansforensics from 192.168.26.10 port 33354 ssh2",
+  "predecoder": {
+    "program_name": "sshd",
+    "timestamp": "2026-08-28T16:21:00.992636+07:00"
+  },
+  "decoder": {
+    "parent": "sshd",
+    "name": "sshd"
+  },
+  "data": {
+    "srcip": "192.168.26.10",
+    "srcport": "33354",
+    "dstuser": "sansforensics"
+  },
+  "location": "/var/log/auth.log"
+}

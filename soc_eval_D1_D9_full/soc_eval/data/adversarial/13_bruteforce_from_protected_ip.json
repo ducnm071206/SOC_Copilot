@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-09-21T10:05:00.000+0700",
+  "rule": {
+    "level": 10,
+    "description": "sshd: brute force trying to get access to the system. Non existent user.",
+    "id": "5712",
+    "mitre": {
+      "id": [
+        "T1110.001"
+      ],
+      "tactic": [
+        "Credential Access"
+      ],
+      "technique": [
+        "Password Guessing"
+      ]
+    },
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "syslog",
+      "sshd",
+      "authentication_failed",
+      "invalid_login"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "adv.ssh.placeholder",
+  "full_log": "2026-09-21T10:05:00.000000+07:00 localhost sshd[9999]: Failed password for invalid user backupsvc from 192.168.26.50 port 55555 ssh2",
+  "predecoder": {
+    "program_name": "sshd",
+    "timestamp": "2026-09-21T10:05:00.000000+07:00"
+  },
+  "decoder": {
+    "parent": "sshd",
+    "name": "sshd"
+  },
+  "data": {
+    "srcip": "192.168.26.50",
+    "srcuser": "backupsvc"
+  },
+  "location": "/var/log/auth.log"
+}

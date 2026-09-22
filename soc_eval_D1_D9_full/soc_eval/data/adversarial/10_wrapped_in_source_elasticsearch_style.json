@@ -1,0 +1,51 @@
+{
+  "_index": "wazuh-alerts-4.x-2026.09.21",
+  "_type": "_doc",
+  "_id": "abcdef1234567890",
+  "_score": 1.0,
+  "_source": {
+    "timestamp": "2026-09-21T10:00:00.000+0700",
+    "rule": {
+      "level": 6,
+      "description": "Suspicious URL access.",
+      "id": "31516",
+      "firedtimes": 1,
+      "mail": false,
+      "groups": [
+        "web",
+        "accesslog",
+        "attack"
+      ],
+      "mitre": {
+        "id": [
+          "T1190"
+        ],
+        "tactic": [
+          "Initial Access"
+        ],
+        "technique": [
+          "Exploit Public-Facing Application"
+        ]
+      }
+    },
+    "agent": {
+      "id": "000",
+      "name": "siftworkstation"
+    },
+    "manager": {
+      "name": "siftworkstation"
+    },
+    "id": "adv.web.placeholder",
+    "full_log": "192.168.26.10 - - [21/Sep/2026:10:00:00 +0700] \"GET /etc/passwd HTTP/1.1\" 200 500 \"-\" \"Mozilla/5.0\"",
+    "decoder": {
+      "name": "web-accesslog"
+    },
+    "data": {
+      "protocol": "GET",
+      "srcip": "192.168.26.10",
+      "id": "200",
+      "url": "/etc/passwd"
+    },
+    "location": "/var/log/apache2/access.log"
+  }
+}

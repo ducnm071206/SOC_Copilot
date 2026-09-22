@@ -1,0 +1,13 @@
+{
+  "_comment": "PLACEHOLDER - day khong phai rule_map that cua nhom. Chi de eval/retrieval.py chay thu duoc. PHAI THAY BANG rule_map THAT truoc khi chay eval chinh thuc (D4/D5).",
+  "31101": "Rule 31101 (Web server 400 error code) thuong la dau hieu cua traffic quet tu dong (vd Nikto). Kiem tra User-Agent va tan suat truoc khi ket luan la tan cong. Neu khong co bang chung khac, uu tien MONITOR thay vi ESCALATE.",
+  "31151": "Rule 31151 (Multiple 400 errors) la tong hop cua nhieu request loi tu cung 1 srcip - thuong van la scanner. Xem xet nhu 31101.",
+  "31105": "Rule 31105 (XSS attempt) - kiem tra payload trong url co thuc su la script injection hay chi la ky tu dac biet vo tinh. Neu HTTP status la 404, kha nang cao la scanner do URL khong ton tai.",
+  "31103": "Rule 31103 (SQL injection attempt) - kiem tra cu phap SQL trong url/query. Neu response 200 va co du lieu tra ve bat thuong, danh gia nghiem trong hon.",
+  "5710": "Rule 5710 (SSH invalid user) - alert don le muc do thap, chi thanh nghiem trong khi lap lai nhieu lan tu cung srcip (xem rule 5712 - bruteforce).",
+  "5712": "Rule 5712 (SSH bruteforce) - nhieu lan dang nhap that bai lien tiep tu cung srcip trong thoi gian ngan. Can canh giac cao, de xuat MONITOR hoac BLOCK_IP tuy tan suat va srcip co trong PROTECTED_IPS khong.",
+  "100200": "Rule 100200 (Port scan) - nhieu cong bi quet tu cung srcip trong thoi gian ngan. Day la buoc trinh sat (reconnaissance), thuong xay ra truoc khi co tan cong khai thac cu the.",
+  "100230": "Rule 100230 (DE XUAT - Privilege escalation qua sudo) - lenh sudo nhay cam (doc file mat khau, sua sudoers). Day la dau hieu leo thang dac quyen NGHIEM TRONG, can ESCALATE.",
+  "550": "Rule 550 (Integrity checksum changed) - file bi thay doi checksum. Kiem tra duong dan file: neu la file he thong quan trong hoac thu muc web (vd /var/www/), do nghiem trong cao hon file cau hinh thong thuong.",
+  "510": "Rule 510 (rootcheck anomaly) - NGHI NGO CO THE LA FALSE POSITIVE cua rootcheck. Can xac minh thu cong truoc khi ket luan."
+}

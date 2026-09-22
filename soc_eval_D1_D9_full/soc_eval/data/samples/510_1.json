@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-08-28T16:23:33.130+0700",
+  "rule": {
+    "level": 7,
+    "description": "Host-based anomaly detection event (rootcheck).",
+    "id": "510",
+    "firedtimes": 2,
+    "mail": false,
+    "groups": [
+      "ossec",
+      "rootcheck"
+    ],
+    "pci_dss": [
+      "10.6.1"
+    ],
+    "gdpr": [
+      "IV_35.7.d"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787909013.380850",
+  "full_log": "Trojaned version of file '/usr/bin/diff' detected. Signature used: 'bash|^/bin/sh|file\\.h|proc\\.h|/dev/[^n]|^/bin/.*sh' (Generic).",
+  "decoder": {
+    "name": "rootcheck"
+  },
+  "data": {
+    "title": "Trojaned version of file detected.",
+    "file": "/usr/bin/diff"
+  },
+  "location": "rootcheck"
+}

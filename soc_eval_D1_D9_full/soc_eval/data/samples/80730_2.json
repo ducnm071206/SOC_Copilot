@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-08-28T15:40:04.592+0700",
+  "rule": {
+    "level": 3,
+    "description": "Auditd: SELinux permission check.",
+    "id": "80730",
+    "firedtimes": 2,
+    "mail": false,
+    "groups": [
+      "audit",
+      "audit_selinux"
+    ],
+    "gdpr": [
+      "IV_30.1.g",
+      "IV_35.7.d"
+    ],
+    "hipaa": [
+      "164.312.b"
+    ],
+    "nist_800_53": [
+      "AU.6"
+    ],
+    "pci_dss": [
+      "10.6.1"
+    ],
+    "tsc": [
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787906404.15439",
+  "full_log": "type=USER_AVC msg=audit(1787906404.331:1188): pid=1234 uid=101 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor=\"DENIED\" operation=\"dbus_signal\"  bus=\"system\" path=\"/org/freedesktop/login1\" interface=\"org.freedesktop.login1.Manager\" member=\"PrepareForShutdownWithMetadata\" name=\":1.9\" mask=\"receive\" pid=29782 label=\"snap.firefox.firefox\" peer_pid=1319 peer_label=\"unconfined\"  exe=\"/usr/bin/dbus-daemon\" sauid=101 hostname=? addr=? terminal=?'\u001dUID=\"messagebus\" AUID=\"unset\" SAUID=\"messagebus\"",
+  "decoder": {
+    "name": "auditd"
+  },
+  "data": {
+    "srcip": "?",
+    "audit": {
+      "type": "USER_AVC",
+      "id": "1188",
+      "pid": "1234",
+      "auid": "4294967295",
+      "uid": "101",
+      "session": "4294967295",
+      "exe": "/usr/bin/dbus"
+    }
+  },
+  "location": "/var/log/audit/audit.log"
+}

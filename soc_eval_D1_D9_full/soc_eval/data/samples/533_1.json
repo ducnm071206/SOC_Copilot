@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-08-28T15:57:20.043+0700",
+  "rule": {
+    "level": 7,
+    "description": "Listened ports status (netstat) changed (new port opened or closed).",
+    "id": "533",
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "ossec"
+    ],
+    "pci_dss": [
+      "10.2.7",
+      "10.6.1"
+    ],
+    "gpg13": [
+      "10.1"
+    ],
+    "gdpr": [
+      "IV_35.7.d"
+    ],
+    "hipaa": [
+      "164.312.b"
+    ],
+    "nist_800_53": [
+      "AU.14",
+      "AU.6"
+    ],
+    "tsc": [
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787907440.37422",
+  "previous_output": "Previous output:\nossec: output: 'netstat listening ports':\ntcp 0.0.0.0:22 0.0.0.0:* 1/init\ntcp6 :::22 :::* 1/init\ntcp 127.0.0.53:53 0.0.0.0:* 959/systemd-resolve\ntcp 127.0.0.54:53 0.0.0.0:* 959/systemd-resolve\nudp 127.0.0.53:53 0.0.0.0:* 959/systemd-resolve\nudp 127.0.0.54:53 0.0.0.0:* 959/systemd-resolve\ntcp6 :::80 :::* 1798/apache2\nudp 0.0.0.0:137 0.0.0.0:* 1866/nmbd\nudp 172.17.0.1:137 0.0.0.0:* 1866/nmbd\nudp 172.17.255.255:137 0.0.0.0:* 1866/nmbd\nudp 192.168.26.255:137 0.0.0.0:* 1866/nmbd\nudp 192.168.26.30:137 0.0.0.0:* 1866/nmbd\nudp 0.0.0.0:138 0.0.0.0:* 1866/nmbd\nudp 172.17.0.1:138 0.0.0.0:* 1866/nmbd\nudp 172.17.255.255:138 0.0.0.0:* 1866/nmbd\nudp 192.168.26.255:138 0.0.0.0:* 1866/nmbd\nudp 192.168.26.30:138 0.0.0.0:* 1866/nmbd\ntcp 0.0.0.0:139 0.0.0.0:* 1963/smbd\ntcp6 :::139 :::* 1963/smbd\ntcp 0.0.0.0:443 0.0.0.0:* 1310/node\ntcp 0.0.0.0:445 0.0.0.0:* 1963/smbd\ntcp6 :::445 :::* 1963/smbd\nudp 0.0.0.0:514 0.0.0.0:* 1388/rsyslogd\nudp6 :::514 :::* 1388/rsyslogd\ntcp 127.0.0.1:631 0.0.0.0:* 1656/cupsd\ntcp6 ::1:631 :::* 1656/cupsd\ntcp 0.0.0.0:1514 0.0.0.0:* 3497/wazuh-remoted\ntcp 0.0.0.0:1515 0.0.0.0:* 3386/wazuh-authd\nudp 0.0.0.0:2055 0.0.0.0:* 1666/nfcapd\nudp 0.0.0.0:5353 0.0.0.0:* 1220/avahi-daemon\nudp6 :::5353 :::* 1220/avahi-daemon\ntcp6 127.0.0.1:9200 :::* 1742/java\ntcp6 127.0.0.1:9300 :::* 1742/java\nudp 0.0.0.0:33584 0.0.0.0:* 963/systemd-timesyn\nudp 0.0.0.0:43474 0.0.0.0:* 1220/avahi-daemon\nudp6 :::51942 :::* 1220/avahi-daemon\ntcp 0.0.0.0:55000 0.0.0.0:* 3275/python3\ntcp6 :::55000 :::* 3275/python3",
+  "full_log": "ossec: output: 'netstat listening ports':\ntcp 0.0.0.0:22 0.0.0.0:* 1/init\ntcp6 :::22 :::* 1/init\ntcp 127.0.0.53:53 0.0.0.0:* 965/systemd-resolve\ntcp 127.0.0.54:53 0.0.0.0:* 965/systemd-resolve\nudp 127.0.0.53:53 0.0.0.0:* 965/systemd-resolve\nudp 127.0.0.54:53 0.0.0.0:* 965/systemd-resolve\ntcp6 :::80 :::* 1826/apache2\nudp 0.0.0.0:137 0.0.0.0:* 1907/nmbd\nudp 192.168.26.255:137 0.0.0.0:* 1907/nmbd\nudp 192.168.26.30:137 0.0.0.0:* 1907/nmbd\nudp 0.0.0.0:138 0.0.0.0:* 1907/nmbd\nudp 192.168.26.255:138 0.0.0.0:* 1907/nmbd\nudp 192.168.26.30:138 0.0.0.0:* 1907/nmbd\ntcp 0.0.0.0:139 0.0.0.0:* 1996/smbd\ntcp6 :::139 :::* 1996/smbd\ntcp 0.0.0.0:443 0.0.0.0:* 1364/node\ntcp 0.0.0.0:445 0.0.0.0:* 1996/smbd\ntcp6 :::445 :::* 1996/smbd\nudp 0.0.0.0:514 0.0.0.0:* 1437/rsyslogd\nudp6 :::514 :::* 1437/rsyslogd\ntcp 127.0.0.1:631 0.0.0.0:* 1676/cupsd\ntcp6 ::1:631 :::* 1676/cupsd\ntcp 0.0.0.0:1514 0.0.0.0:* 3567/wazuh-remoted\ntcp 0.0.0.0:1515 0.0.0.0:* 3423/wazuh-authd\nudp 0.0.0.0:2055 0.0.0.0:* 1682/nfcapd\nudp 0.0.0.0:5353 0.0.0.0:* 1226/avahi-daemon\nudp6 :::5353 :::* 1226/avahi-daemon\nudp 0.0.0.0:52507 0.0.0.0:* 1226/avahi-daemon\ntcp 0.0.0.0:55000 0.0.0.0:* 3333/python3\ntcp6 :::55000 :::* 3333/python3\nudp6 :::57154 :::* 1226/avahi-daemon",
+  "decoder": {
+    "name": "ossec"
+  },
+  "previous_log": "ossec: output: 'netstat listening ports':\ntcp 0.0.0.0:22 0.0.0.0:* 1/init\ntcp6 :::22 :::* 1/init\ntcp 127.0.0.53:53 0.0.0.0:* 959/systemd-resolve\ntcp 127.0.0.54:53 0.0.0.0:* 959/systemd-resolve\nudp 127.0.0.53:53 0.0.0.0:* 959/systemd-resolve\nudp 127.0.0.54:53 0.0.0.0:* 959/systemd-resolve\ntcp6 :::80 :::* 1798/apache2\nudp 0.0.0.0:137 0.0.0.0:* 1866/nmbd\nudp 172.17.0.1:137 0.0.0.0:* 1866/nmbd\nudp 172.17.255.255:137 0.0.0.0:* 1866/nmbd\nudp 192.168.26.255:137 0.0.0.0:* 1866/nmbd\nudp 192.168.26.30:137 0.0.0.0:* 1866/nmbd\nudp 0.0.0.0:138 0.0.0.0:* 1866/nmbd\nudp 172.17.0.1:138 0.0.0.0:* 1866/nmbd\nudp 172.17.255.255:138 0.0.0.0:* 1866/nmbd\nudp 192.168.26.255:138 0.0.0.0:* 1866/nmbd\nudp 192.168.26.30:138 0.0.0.0:* 1866/nmbd\ntcp 0.0.0.0:139 0.0.0.0:* 1963/smbd\ntcp6 :::139 :::* 1963/smbd\ntcp 0.0.0.0:443 0.0.0.0:* 1310/node\ntcp 0.0.0.0:445 0.0.0.0:* 1963/smbd\ntcp6 :::445 :::* 1963/smbd\nudp 0.0.0.0:514 0.0.0.0:* 1388/rsyslogd\nudp6 :::514 :::* 1388/rsyslogd\ntcp 127.0.0.1:631 0.0.0.0:* 1656/cupsd\ntcp6 ::1:631 :::* 1656/cupsd\ntcp 0.0.0.0:1514 0.0.0.0:* 3497/wazuh-remoted\ntcp 0.0.0.0:1515 0.0.0.0:* 3386/wazuh-authd\nudp 0.0.0.0:2055 0.0.0.0:* 1666/nfcapd\nudp 0.0.0.0:5353 0.0.0.0:* 1220/avahi-daemon\nudp6 :::5353 :::* 1220/avahi-daemon\ntcp6 127.0.0.1:9200 :::* 1742/java\ntcp6 127.0.0.1:9300 :::* 1742/java\nudp 0.0.0.0:33584 0.0.0.0:* 963/systemd-timesyn\nudp 0.0.0.0:43474 0.0.0.0:* 1220/avahi-daemon\nudp6 :::51942 :::* 1220/avahi-daemon\ntcp 0.0.0.0:55000 0.0.0.0:* 3275/python3\ntcp6 :::55000 :::* 3275/python3",
+  "location": "netstat listening ports"
+}

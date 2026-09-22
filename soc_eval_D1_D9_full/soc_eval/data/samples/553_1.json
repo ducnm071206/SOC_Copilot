@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-08-28T15:56:46.009+0700",
+  "rule": {
+    "level": 7,
+    "description": "File deleted.",
+    "id": "553",
+    "mitre": {
+      "id": [
+        "T1070.004",
+        "T1485"
+      ],
+      "tactic": [
+        "Defense Evasion",
+        "Impact"
+      ],
+      "technique": [
+        "File Deletion",
+        "Data Destruction"
+      ]
+    },
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "ossec",
+      "syscheck",
+      "syscheck_entry_deleted",
+      "syscheck_file"
+    ],
+    "pci_dss": [
+      "11.5"
+    ],
+    "gpg13": [
+      "4.11"
+    ],
+    "gdpr": [
+      "II_5.1.f"
+    ],
+    "hipaa": [
+      "164.312.c.1",
+      "164.312.c.2"
+    ],
+    "nist_800_53": [
+      "SI.7"
+    ],
+    "tsc": [
+      "PI1.4",
+      "PI1.5",
+      "CC6.1",
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787907406.34665",
+  "full_log": "File '/etc/cups/subscriptions.conf.N' deleted\nMode: realtime\n",
+  "syscheck": {
+    "path": "/etc/cups/subscriptions.conf.N",
+    "mode": "realtime",
+    "size_after": "841",
+    "perm_after": "rw-r-----",
+    "uid_after": "0",
+    "gid_after": "7",
+    "md5_after": "c5f70ff4d8b79911cbc46f13c1e154c7",
+    "sha1_after": "cc211dc38e710ea6fd372f3b7cf9a0e7ca3710dc",
+    "sha256_after": "8b73f5dc92ceb834c1842394b8670965d21ee1eb12f4b223b740ccfed09f431b",
+    "uname_after": "root",
+    "gname_after": "lp",
+    "mtime_after": "2026-08-28T15:56:45",
+    "inode_after": 5508547,
+    "event": "deleted"
+  },
+  "decoder": {
+    "name": "syscheck_deleted"
+  },
+  "location": "syscheck"
+}

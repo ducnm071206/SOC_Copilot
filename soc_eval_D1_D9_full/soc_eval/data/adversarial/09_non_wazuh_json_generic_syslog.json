@@ -1,0 +1,10 @@
+{
+  "log_type": "generic_syslog",
+  "host": "webserver-01",
+  "priority": "warning",
+  "message": "Failed login attempt for user 'root' from 203.0.113.55",
+  "tags": [
+    "auth",
+    "failure"
+  ]
+}

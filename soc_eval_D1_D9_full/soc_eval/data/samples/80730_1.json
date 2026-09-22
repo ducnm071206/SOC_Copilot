@@ -1,0 +1,56 @@
+{
+  "timestamp": "2026-08-28T16:22:38.725+0700",
+  "rule": {
+    "level": 3,
+    "description": "Auditd: SELinux permission check.",
+    "id": "80730",
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "audit",
+      "audit_selinux"
+    ],
+    "gdpr": [
+      "IV_30.1.g",
+      "IV_35.7.d"
+    ],
+    "hipaa": [
+      "164.312.b"
+    ],
+    "nist_800_53": [
+      "AU.6"
+    ],
+    "pci_dss": [
+      "10.6.1"
+    ],
+    "tsc": [
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787908958.379613",
+  "full_log": "type=USER_AVC msg=audit(1787908958.619:1339): pid=1236 uid=101 auid=4294967295 ses=4294967295 subj=unconfined msg='apparmor=\"DENIED\" operation=\"dbus_method_call\"  bus=\"system\" path=\"/\" interface=\"org.freedesktop.DBus.Peer\" member=\"Ping\" mask=\"send\" name=\"org.freedesktop.Avahi\" pid=2047 label=\"snap.cups.cupsd\"  exe=\"/usr/bin/dbus-daemon\" sauid=101 hostname=? addr=? terminal=?'\u001dUID=\"messagebus\" AUID=\"unset\" SAUID=\"messagebus\"",
+  "decoder": {
+    "name": "auditd"
+  },
+  "data": {
+    "srcip": "?",
+    "audit": {
+      "type": "USER_AVC",
+      "id": "1339",
+      "pid": "1236",
+      "auid": "4294967295",
+      "uid": "101",
+      "session": "4294967295",
+      "exe": "/usr/bin/dbus"
+    }
+  },
+  "location": "/var/log/audit/audit.log"
+}

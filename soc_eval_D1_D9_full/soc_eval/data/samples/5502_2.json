@@ -1,0 +1,57 @@
+{
+  "timestamp": "2026-08-28T16:27:26.849+0700",
+  "rule": {
+    "level": 3,
+    "description": "PAM: Login session closed.",
+    "id": "5502",
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "pam",
+      "syslog"
+    ],
+    "pci_dss": [
+      "10.2.5"
+    ],
+    "gpg13": [
+      "7.8",
+      "7.9"
+    ],
+    "gdpr": [
+      "IV_32.2"
+    ],
+    "hipaa": [
+      "164.312.b"
+    ],
+    "nist_800_53": [
+      "AU.14",
+      "AC.7"
+    ],
+    "tsc": [
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787909246.440084",
+  "full_log": "2026-08-28T16:27:25.675338+07:00 localhost sshd[6446]: pam_unix(sshd:session): session closed for user sansforensics",
+  "predecoder": {
+    "program_name": "sshd",
+    "timestamp": "2026-08-28T16:27:25.675338+07:00"
+  },
+  "decoder": {
+    "parent": "pam",
+    "name": "pam"
+  },
+  "data": {
+    "dstuser": "sansforensics"
+  },
+  "location": "/var/log/auth.log"
+}

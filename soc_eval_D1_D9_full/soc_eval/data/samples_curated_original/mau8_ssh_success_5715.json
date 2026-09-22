@@ -1,0 +1,77 @@
+{
+  "timestamp": "2026-08-28T16:36:18.902+0700",
+  "rule": {
+    "level": 3,
+    "description": "sshd: authentication success.",
+    "id": "5715",
+    "mitre": {
+      "id": [
+        "T1078",
+        "T1021"
+      ],
+      "tactic": [
+        "Defense Evasion",
+        "Persistence",
+        "Privilege Escalation",
+        "Initial Access",
+        "Lateral Movement"
+      ],
+      "technique": [
+        "Valid Accounts",
+        "Remote Services"
+      ]
+    },
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "syslog",
+      "sshd",
+      "authentication_success"
+    ],
+    "gdpr": [
+      "IV_32.2"
+    ],
+    "gpg13": [
+      "7.1",
+      "7.2"
+    ],
+    "hipaa": [
+      "164.312.b"
+    ],
+    "nist_800_53": [
+      "AU.14",
+      "AC.7"
+    ],
+    "pci_dss": [
+      "10.2.5"
+    ],
+    "tsc": [
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787909778.451405",
+  "full_log": "2026-08-28T16:36:17.680731+07:00 localhost sshd[6680]: Accepted password for sansforensics from 192.168.26.10 port 49866 ssh2",
+  "predecoder": {
+    "program_name": "sshd",
+    "timestamp": "2026-08-28T16:36:17.680731+07:00"
+  },
+  "decoder": {
+    "parent": "sshd",
+    "name": "sshd"
+  },
+  "data": {
+    "srcip": "192.168.26.10",
+    "srcport": "49866",
+    "dstuser": "sansforensics"
+  },
+  "location": "/var/log/auth.log"
+}

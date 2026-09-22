@@ -1,0 +1,74 @@
+{
+  "timestamp": "2026-08-28T16:32:56.180+0700",
+  "rule": {
+    "level": 3,
+    "description": "PAM: Login session opened.",
+    "id": "5501",
+    "mitre": {
+      "id": [
+        "T1078"
+      ],
+      "tactic": [
+        "Defense Evasion",
+        "Persistence",
+        "Privilege Escalation",
+        "Initial Access"
+      ],
+      "technique": [
+        "Valid Accounts"
+      ]
+    },
+    "firedtimes": 7,
+    "mail": false,
+    "groups": [
+      "pam",
+      "syslog",
+      "authentication_success"
+    ],
+    "pci_dss": [
+      "10.2.5"
+    ],
+    "gpg13": [
+      "7.8",
+      "7.9"
+    ],
+    "gdpr": [
+      "IV_32.2"
+    ],
+    "hipaa": [
+      "164.312.b"
+    ],
+    "nist_800_53": [
+      "AU.14",
+      "AC.7"
+    ],
+    "tsc": [
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787909576.447965",
+  "full_log": "2026-08-28T16:32:55.998526+07:00 localhost sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sansforensics(uid=1000)",
+  "predecoder": {
+    "program_name": "sudo",
+    "timestamp": "2026-08-28T16:32:55.998526+07:00"
+  },
+  "decoder": {
+    "parent": "pam",
+    "name": "pam"
+  },
+  "data": {
+    "srcuser": "sansforensics",
+    "dstuser": "root(uid=0)",
+    "uid": "1000"
+  },
+  "location": "/var/log/auth.log"
+}

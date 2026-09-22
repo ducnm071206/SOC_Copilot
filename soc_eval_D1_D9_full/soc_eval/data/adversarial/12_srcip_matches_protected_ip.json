@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-09-21T10:00:00.000+0700",
+  "rule": {
+    "level": 6,
+    "description": "Multiple failed login attempts to web application from same source ip.",
+    "id": "100220",
+    "firedtimes": 1,
+    "mail": false,
+    "groups": [
+      "web",
+      "accesslog",
+      "attack"
+    ],
+    "mitre": {
+      "id": [
+        "T1190"
+      ],
+      "tactic": [
+        "Initial Access"
+      ],
+      "technique": [
+        "Exploit Public-Facing Application"
+      ]
+    }
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "adv.web.placeholder",
+  "full_log": "192.168.26.30 - - [21/Sep/2026:10:00:00 +0700] \"GET /wp-login.php HTTP/1.1\" 200 500 \"-\" \"Mozilla/5.0\"",
+  "decoder": {
+    "name": "web-accesslog"
+  },
+  "data": {
+    "protocol": "GET",
+    "srcip": "192.168.26.30",
+    "id": "200",
+    "url": "/wp-login.php"
+  },
+  "location": "/var/log/apache2/access.log"
+}

@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-08-28T17:03:52.114+0700",
+  "rule": {
+    "level": 7,
+    "description": "ClamAV: Virus detected: Eicar-Test-Signature.",
+    "id": "52505",
+    "mitre": {
+      "id": [
+        "T1587.001"
+      ],
+      "tactic": [
+        "Resource Development"
+      ],
+      "technique": [
+        "Develop Capabilities: Malware"
+      ]
+    },
+    "firedtimes": 1,
+    "mail": true,
+    "groups": [
+      "clamav",
+      "virus"
+    ],
+    "pci_dss": [
+      "11.4",
+      "5.1"
+    ],
+    "gdpr": [
+      "II_5.1.f"
+    ],
+    "hipaa": [
+      "164.312.b"
+    ],
+    "nist_800_53": [
+      "SI.3"
+    ],
+    "tsc": [
+      "CC6.8",
+      "CC7.2",
+      "CC7.3"
+    ]
+  },
+  "agent": {
+    "id": "000",
+    "name": "siftworkstation"
+  },
+  "manager": {
+    "name": "siftworkstation"
+  },
+  "id": "1787911432.9290103",
+  "full_log": "/var/www/html/eicar.com: Eicar-Test-Signature FOUND",
+  "predecoder": {
+    "program_name": "clamd",
+    "timestamp": "2026-08-28T17:03:52.114+0700"
+  },
+  "decoder": {
+    "name": "clamav"
+  },
+  "data": {
+    "file": "/var/www/html/eicar.com",
+    "virus_name": "Eicar-Test-Signature",
+    "status": "FOUND"
+  },
+  "location": "clamav_log"
+}

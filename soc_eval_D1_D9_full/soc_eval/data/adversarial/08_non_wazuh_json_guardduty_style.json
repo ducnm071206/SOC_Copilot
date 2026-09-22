@@ -1,0 +1,13 @@
+{
+  "eventVersion": "1.0",
+  "eventTime": "2026-09-21T10:30:00Z",
+  "eventSource": "guardduty.amazonaws.com",
+  "eventName": "UnauthorizedAccess:EC2/SSHBruteForce",
+  "severity": 5,
+  "region": "ap-southeast-1",
+  "resource": {
+    "instanceId": "i-0123456789abcdef0",
+    "publicIp": "203.0.113.10"
+  },
+  "description": "SSH brute force attempts detected against EC2 instance."
+}
