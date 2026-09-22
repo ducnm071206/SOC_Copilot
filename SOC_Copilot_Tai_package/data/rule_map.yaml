@@ -1,0 +1,55 @@
+# data/rule_map.yaml - BASELINE tra SOP theo rule.id của Wazuh (không dùng embedding).
+# Người soạn: Tài. Đức đối chiếu với danh sách rule thực có trong dữ liệu trước khi freeze.
+# Lưu ý: file này do người viết SOP soạn nên mạnh "theo thiết kế"; đó là baseline, không phải kết quả của RAG.
+# Khóa (rule.id) luôn để dạng chuỗi trong dấu nháy: Wazuh xuất rule.id là chuỗi.
+# Rule không có trong bảng sẽ dùng `default` (kiểm tra nhánh fallback: 510, 533, 80730 cố ý không liệt kê).
+
+version: 1
+default: sop_general
+
+rules:
+  # SSH / xác thực thất bại liên tục
+  "5710": sop_ssh_bruteforce
+  "5760": sop_ssh_bruteforce
+  "5503": sop_ssh_bruteforce
+  "5551": sop_ssh_bruteforce
+  "2502": sop_ssh_bruteforce
+  "5758": sop_ssh_bruteforce
+  "5712": sop_ssh_bruteforce
+
+  # Nhiều lần thất bại rồi thành công (nghi chiếm tài khoản)
+  "40112": sop_bruteforce_success
+
+  # Tấn công web
+  "31103": sop_sqli
+  "31105": sop_xss
+  "31154": sop_xss
+  "31166": sop_web_rce
+  "31168": sop_web_rce
+  "31104": sop_web_attack_generic
+  "31106": sop_web_attack_generic
+  "31153": sop_web_attack_generic
+
+  # Dò quét web
+  "31101": sop_web_bruteforce_scan
+  "31121": sop_web_bruteforce_scan
+  "31151": sop_web_bruteforce_scan
+  "30305": sop_web_bruteforce_scan
+  "31516": sop_web_bruteforce_scan
+
+  # Toàn vẹn tệp (syscheck)
+  "550": sop_file_integrity
+  "553": sop_file_integrity
+  "554": sop_file_integrity
+
+  # Nâng quyền
+  "5301": sop_privilege_escalation
+
+  # Hoạt động bình thường
+  "5402": sop_benign_activity
+  "5403": sop_benign_activity
+  "5501": sop_benign_activity
+  "5502": sop_benign_activity
+  "5715": sop_benign_activity
+  "502": sop_benign_activity
+  "591": sop_benign_activity
