@@ -1,0 +1,13 @@
+name: tests
+on: [push, pull_request]
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      # không cài sentence-transformers/torch: test dùng embedding giả, không cần model
+      - run: pip install "chromadb==0.4.24" "numpy<2" "pydantic>=2" pyyaml requests pytest
+      - run: pytest -q

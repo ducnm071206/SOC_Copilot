@@ -1,0 +1,10 @@
+chromadb==0.4.24
+numpy<2
+sentence-transformers
+pydantic>=2
+pyyaml
+requests
+streamlit
+pytest
+pandas
+matplotlib
